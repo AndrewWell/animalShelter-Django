@@ -1,0 +1,26 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<h1>Новости</h1>
+<p>Новости</p>
+{%load static%}
+<div class="row row-cols-1 row-cols-md-3">
+    {% for el in news %}
+    <div class="card">
+        <img class="card-img-top" src="../news{{el.image.url}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{el.title}}</h5>
+            <p class="card-text">{{el.full_text}}</p>
+        </div>
+    </div>
+    {% endfor%}
+    <br>
+    <p><a href="{% url 'prepNews' %}"
+          class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Предложить
+        новость</a></p>
+</div>
+{% endblock %}
+
+{% block title %}
+{{title}}
+{% endblock %}

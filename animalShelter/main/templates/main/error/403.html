@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+
+<div class="error">
+    <img src="main/static/main/img/403.png" alt="">
+</div>
+<p>
+<h3 style="text-align: center"> Доступ к страницу ограничен <br>
+    Вы запросили страницу, доступ к которой ограницен специальными правами. <br>
+  Возможно, это закрытая группа или личные файлы пользователя.
+</h3>
+</p>
+{% endblock %}
+
+{% block title %}
+Ошибка 403
+{% endblock %}

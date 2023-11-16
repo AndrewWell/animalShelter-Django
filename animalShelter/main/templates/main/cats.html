@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<h2 className="text-center" >Наши любимцы</h2>
+<div class="row row-cols-1 row-cols-md-3">
+
+    {% for el in cats %}
+    <div class="card">
+        <img class="card-img-top" src="{{el.image.url}}" alt="{{el.title}}">
+        <div class="card-body">
+            <h5 class="card-title">{{el.title}}</h5>
+            <p class="card-text">{{el.full_text}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block title %}
+{{title}}
+{% endblock %}

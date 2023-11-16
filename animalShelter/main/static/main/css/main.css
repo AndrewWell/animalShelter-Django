@@ -1,0 +1,93 @@
+
+.error{
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+}
+
+
+@keyframes slideme {
+    0% {
+        left: -30px;
+        margin-left: 0px;
+    }
+    30% {
+        left: 110%;
+        margin-left: 80px;
+    }
+    100% {
+        left: 110%;
+        margin-left: 80px;
+    }
+}
+
+.btn-error500 {
+    overflow: hidden;
+    position: relative;
+    background: #83c0ff;
+    padding: 15px 25px;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-error500:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 60px;
+    height: 100px;
+    background-color: #fff;
+    filter: blur(30px);
+    transform: skewX(30deg) translateZ(0);
+    transition: 1s;
+    animation-name: slideme;
+    animation-duration: 3s;
+    animation-delay: 0.05s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+a{
+    text-decoration:none
+}
+
+form{
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+.features img{
+    position: absolute;
+    bottom:0;
+    width:30%
+}
+.card-img-top{
+    width: 70%;
+    float: left;
+    margin: 0 0 0 3.5%;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.text-center{
+    text-align: center;
+}
+fatty{
+    font-weight: bold;
+}
+.contacts{
+    border: dashed green;
+    position:absolute;
+    margin:5%;
+    margin-left:30%;
+    margin-right:1%;
+}
+center{
+    text-align:center;
+}
